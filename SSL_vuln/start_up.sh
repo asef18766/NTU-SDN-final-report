@@ -1,0 +1,1 @@
+docker run -it --privileged --rm vuln-ssl /bin/bash
