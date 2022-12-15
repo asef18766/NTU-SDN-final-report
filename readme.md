@@ -15,3 +15,14 @@
     ├── Dockerfile
     └── start_up.sh
 ```
+
+## poc of cve-2022-3786 (one way)
+
+```
+# cmd 1
+./run_server.sh vuln
+
+# cmd 2
+././run_client.sh ca
+
+```
