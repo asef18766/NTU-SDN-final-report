@@ -26,8 +26,8 @@ RUN apt install -y unzip perl && \
 RUN apt-get install -y python3 
 RUN apt install -y python3-pip 
 RUN pip3 install  pwntools
-RUN wget -O /home/.gdbinit-gef.py http://gef.blah.cat/py
-RUN echo source /home/.gdbinit-gef.py >> /home/.gdbinit
+RUN wget -O /root/.gdbinit-gef.py http://gef.blah.cat/py
+RUN echo source /root/.gdbinit-gef.py >> /root/.gdbinit
 
 
 RUN apt-get install -y vim \
