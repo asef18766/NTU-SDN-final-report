@@ -22,5 +22,5 @@ subjectKeyIdentifier = hash
 #authorityKeyIdentifier = keyid:always,issuer:always
 basicConstraints = critical, CA:true
 
-nameConstraints = permitted;email:xn--ww902716
+nameConstraints = permitted;email:xn--client9487
 keyUsage = critical, digitalSignature, cRLSign, keyCertSign
