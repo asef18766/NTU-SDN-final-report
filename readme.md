@@ -23,6 +23,6 @@
 ./run_server.sh vuln
 
 # cmd 2
-././run_client.sh ca
+./run_client.sh ca
 
 ```
