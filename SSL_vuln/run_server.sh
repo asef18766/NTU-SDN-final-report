@@ -11,8 +11,8 @@ fi
 
 if [ "$2" ==  "debug" ]
 then
-    gdb -x gdb_script --args $PATH_TO_OPENSSL/openssl s_server  -cert server/leaf.pem -key server/leaf.key -cert_chain "server/${1}.pem" -accept 9001 -verify 2 
+    gdb -x gdb_script --args $PATH_TO_OPENSSL/openssl s_server  -cert server/leaf.pem -key server/leaf.key -cert_chain "server/${1}.pem" -accept 9001 -verify 2 -tls1_2 
 else
-    $PATH_TO_OPENSSL/openssl s_server  -cert server/leaf.pem -key server/leaf.key -cert_chain "server/${1}.pem" -accept 9001 -verify 2 -state
+    $PATH_TO_OPENSSL/openssl s_server  -cert server/leaf.pem -key server/leaf.key -cert_chain "server/${1}.pem" -accept 9001 -verify 2 -state -tls1_2
 fi
 

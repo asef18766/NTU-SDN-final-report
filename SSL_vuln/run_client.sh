@@ -12,12 +12,12 @@ fi
 
 if [ "$2" ==  "debug" ]
 then
-    gdb -x gdb_script --args $PATH_TO_OPENSSL/openssl s_client -connect localhost:9001 -chainCAfile "client/${1}.pem" -cert client/leaf.pem -key client/leaf.key
+    gdb -x gdb_script --args $PATH_TO_OPENSSL/openssl s_client -connect localhost:9001 -chainCAfile "client/${1}.pem" -cert client/leaf.pem -key client/leaf.key -tls1_2
 elif [ "$2" == "bypass" ]
 then
     echo "bypass"
-    gdb -x bypass_script --args $PATH_TO_OPENSSL/openssl s_client -connect localhost:9001 -chainCAfile "client/${1}.pem" -cert client/leaf.pem -key client/leaf.key
+    gdb -x bypass_script --args $PATH_TO_OPENSSL/openssl s_client -connect localhost:9001 -chainCAfile "client/${1}.pem" -cert client/leaf.pem -key client/leaf.key -tls1_2
 else
-    $PATH_TO_OPENSSL/openssl s_client -connect localhost:9001 -chainCAfile "client/${1}.pem" -cert client/leaf.pem -key client/leaf.key -state
+    $PATH_TO_OPENSSL/openssl s_client -connect localhost:9001 -chainCAfile "client/${1}.pem" -cert client/leaf.pem -key client/leaf.key -state -tls1_2
 
 fi
