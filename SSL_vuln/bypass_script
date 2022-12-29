@@ -1,0 +1,8 @@
+starti
+b _dl_start_user
+c
+b *nc_email_eai+619
+c
+c
+set $rip=*nc_email_eai+624
+c
