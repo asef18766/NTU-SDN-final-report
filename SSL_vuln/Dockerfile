@@ -58,4 +58,4 @@ RUN cd ./CVE-2022-3602 && \
 COPY server/* /home/CVE-2022-3602/server/
 COPY client/* /home/CVE-2022-3602/client/
 COPY run*.sh /home/CVE-2022-3602/
-COPY gdb_script /home/CVE-2022-3602/
+COPY *_script /home/CVE-2022-3602/
