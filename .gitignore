@@ -1,0 +1,8 @@
+firewall/__pycache__/*
+firewall/__pycache__
+__pycache__/*
+__pycache__
+*.csr
+*.key
+*.pem
+*.srl

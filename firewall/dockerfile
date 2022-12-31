@@ -1,0 +1,7 @@
+FROM python
+RUN apt install -y git && \
+    git clone https://github.com/nabla-c0d3/tls_parser && \
+    cd tls_parser && \
+    pip install -e . && \
+    pip install -r dev-requirements.txt
+RUN pip install mitmproxy

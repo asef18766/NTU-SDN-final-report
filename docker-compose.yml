@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  ssl_server:
+    build: ./SSL_vuln
+    volumes:
+      - ./SSL_vuln:/home/CVE-2022-3602
+    entrypoint: tail -f /dev/null
+  ssl_client:
+    build: ./SSL_vuln
+    volumes:
+      - ./SSL_vuln:/home/CVE-2022-3602
+    entrypoint: tail -f /dev/null
+  firewall:
+    build: ./firewall
+    volumes:
+      - ./firewall:/home/firewall
+    entrypoint: tail -f /dev/null
