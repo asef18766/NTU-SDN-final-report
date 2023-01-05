@@ -16,13 +16,27 @@
     └── start_up.sh
 ```
 
-## poc of cve-2022-3786 (one way)
+## poc of cve-2022-3786 
 
 ```
 # cmd 1
-./run_server.sh vuln
+./run_server.sh ca
 
 # cmd 2
-./run_client.sh ca debug
+./run_client.sh vuln bypass
+
+```
+
+
+## poc of sdn p4 parser
+
+enviroment : P4 Tutorial 2019-04-25 with python3 scapy(Need to install yourself)
+
+```
+# h1 
+./send.py 10.0.2.2 jflkdjfndknflsdknflkasndfnidoqqqqqqqqqqqkfkjq......xn--0
+
+# h2 
+./receive.py 
 
 ```
