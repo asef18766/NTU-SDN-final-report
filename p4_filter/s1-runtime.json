@@ -1,0 +1,35 @@
+{
+  "target": "bmv2",
+  "p4info": "build/source_routing.p4.p4info.txt",
+  "bmv2_json": "build/source_routing.json",
+  "table_entries": [
+    {
+      "table": "MyIngress.t",
+      "default_action": true,
+      "action_name": "MyIngress.drop",
+      "action_params": { }
+    },
+    {
+      "table": "MyIngress.t",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.1.1", 32]
+      },
+      "action_name": "MyIngress.accept_packet",
+      "action_params": {
+        "dstAddr": "00:00:00:00:01:01",
+        "port": 1
+      }
+    },
+    {
+      "table": "MyIngress.t",
+      "match": {
+        "hdr.ipv4.dstAddr": ["10.0.2.2", 32]
+      },
+      "action_name": "MyIngress.accept_packet",
+      "action_params": {
+        "dstAddr": "00:00:00:02:02:00",
+        "port": 2
+      }
+    }
+  ]
+}
